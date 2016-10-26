@@ -4,7 +4,7 @@ hide circle
 
 title weather ER図
 
-class amedas{
+class amedas_data{
   都府県振興局:string
   観測所番号:integer
   種類:string
@@ -21,7 +21,7 @@ class amedas{
   観測開始年月日:string
 }
 
-class snow_amedas{
+class snow_amedas_data{
   都府県振興局:string
   観測所番号:integer
   種類:string
@@ -39,7 +39,7 @@ note left #aqua
   積雪の多い約300箇所
 end note
 
-class weather{
+class weather_data{
   時刻[時]:integer
   気温[℃]:float
   降水量[mm]:float
@@ -54,7 +54,7 @@ note right #aqua
   取得できるデータが異なる
 end note
 
-amedas -- weather :1対n
-snow_amedas -- weather :1対n
+amedas_data -- weather_data :1対n
+snow_amedas_data -- weather_data :1対n
 
 @enduml
