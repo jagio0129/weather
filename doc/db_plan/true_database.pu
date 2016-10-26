@@ -1,0 +1,60 @@
+@startuml
+left to right direction
+hide circle
+
+title weather ER図
+
+class amedas{
+  prefecture:string
+  amedas_id:integer
+  category:string
+  amedas_name:string
+  phonetic:string
+  address:text
+  latitude_degrees:integer
+  latitude_minutes:float
+  longitude_degrees:integer
+  longitude_minutes:float
+  above_sea_level:integer
+  height_of_the_anemometer:float
+  height_of_the_thermometer:float
+  observation_start_date:string
+}
+
+class snow_amedas{
+  prefecture:string
+  amedas_id:integer
+  category:string
+  amedas_name:string
+  phonetic:string
+  address:text
+  latitude_degrees:integer
+  latitude_minutes:float
+  longitude_degrees:integer
+  longitude_minutes:float
+  above_sea_level:integer
+observation_start_date:string
+}
+note left #aqua
+  積雪の多い約300箇所
+end note
+
+class weather{
+  time:integer
+  temperature:float
+  precipitation:float
+  wind_direction:string
+  wind_speed:float
+  sunshine:float
+  depth_of_snow:integer
+}
+
+note right #aqua
+  観測所の種類によって
+  取得できるデータが異なる
+end note
+
+amedas -- weather :1対n
+snow_amedas -- weather :1対n
+
+@enduml
