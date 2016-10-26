@@ -4,7 +4,7 @@ hide circle
 
 title weather ER図
 
-class amedas{
+class amedas_data{
   prefecture:string
   amedas_id:integer
   category:string
@@ -21,7 +21,7 @@ class amedas{
   observation_start_date:string
 }
 
-class snow_amedas{
+class snow_amedas_data{
   prefecture:string
   amedas_id:integer
   category:string

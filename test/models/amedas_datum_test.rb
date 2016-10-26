@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AmedaTest < ActiveSupport::TestCase
+class AmedasDatumTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
