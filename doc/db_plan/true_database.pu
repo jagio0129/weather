@@ -33,20 +33,14 @@ class snow_amedas{
   longitude_degrees:integer
   longitude_minutes:float
   above_sea_level:integer
-observation_start_date:string
+  observation_start_date:string
 }
 note left #aqua
   積雪の多い約300箇所
 end note
 
-class weather{
-  time:integer
-  temperature:float
-  precipitation:float
-  wind_direction:string
-  wind_speed:float
-  sunshine:float
-  depth_of_snow:integer
+class weather_data{
+  time:integer temperature:float precipitation:float wind_direction:string wind_speed:float sunshine:float depth_of_snow:integer
 }
 
 note right #aqua
