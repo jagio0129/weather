@@ -1,0 +1,60 @@
+@startuml
+left to right direction
+hide circle
+
+title weather ER図
+
+class amedas{
+  都府県振興局:string
+  観測所番号:integer
+  種類:string
+  観測所名:string
+  カタカナ名:string
+  所在地:text
+  緯度[度]:integer
+  緯度[分]:float
+  経度[度]:integer
+  経度[分]:float
+  海面上の高さ[m]:integer
+  風速計の高さ[m]:float
+  温度計の高さ[m]:float
+  観測開始年月日:string
+}
+
+class snow_amedas{
+  都府県振興局:string
+  観測所番号:integer
+  種類:string
+  観測所名:string
+  カタカナ名:string
+  所在地:text
+  緯度[度]:integer
+  緯度[分]:float
+  経度[度]:integer
+  経度[分]:float
+  海面上の高さ[m]:integer
+  観測開始年月日:string
+}
+note left #aqua
+  積雪の多い約300箇所
+end note
+
+class weather{
+  時刻[時]:integer
+  気温[℃]:float
+  降水量[mm]:float
+  風向き[16方位]:string
+  風速[m/s]:float
+  日照時間[h]:float
+  積雪深[cm]:integer
+}
+
+note right #aqua
+  観測所の種類によって
+  取得できるデータが異なる
+end note
+
+amedas -- weather :1対n
+snow_amedas -- weather :1対n
+
+@enduml
