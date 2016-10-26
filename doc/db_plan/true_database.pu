@@ -40,7 +40,13 @@ note left #aqua
 end note
 
 class weather_data{
-  time:integer temperature:float precipitation:float wind_direction:string wind_speed:float sunshine:float depth_of_snow:integer
+  time:integer
+  temperature:float
+  precipitation:float
+  wind_direction:string
+  wind_speed:float
+  sunshine:float
+  depth_of_snow:integer
 }
 
 note right #aqua
@@ -48,7 +54,7 @@ note right #aqua
   取得できるデータが異なる
 end note
 
-amedas -- weather :1対n
-snow_amedas -- weather :1対n
+amedas_data -- weather_data :1対n
+snow_amedas_data -- weather_data :1対n
 
 @enduml

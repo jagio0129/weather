@@ -54,7 +54,7 @@ note right #aqua
   取得できるデータが異なる
 end note
 
-amedas -- weather :1対n
-snow_amedas -- weather :1対n
+amedas_data -- weather_data :1対n
+snow_amedas_data -- weather_data :1対n
 
 @enduml
